@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hydrogen : UTC OLP - Atoms </title>
+    <meta name="description" content="Animation - A-Frame">
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.5.1/dist/aframe-look-at-component.min.js"></script>
+
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <!-- Defining the subatomic particles-->
+        <a-mixin id="electron" geometry="primitive: sphere; radius: 0.1" material="color: yellow" roughness="0.2"></a-mixin>
+        <a-mixin id="neutron" geometry="primitive: sphere; radius: 0.2" material="color: green" roughness="0.4"></a-mixin>
+        <a-mixin id="proton" geometry="primitive: sphere; radius: 0.2" material="color: red" roughness="0.6"></a-mixin>
+        
+        <!-- defining the movement of particals-->
+        <a-mixin id="orbit" attribute="rotation" to="0 360 0"
+                  repeat="indefinite" easing="linear" dur="300"></a-mixin>
+        <a-mixin id="spin" attribute="rotation" to="0 -360 360"
+                  repeat="indefinite" easing="linear" dur="9000"></a-mixin>
+      </a-assets>
+
+      <a-sky color="#AAB"></a-sky>
+      <a-entity position="0 0 6">
+        <a-camera wasd-controls-enabled="true" user-height="0"></a-camera>
+    
+      </a-entity>
+      
+      <a-text font="kelsonsans" value="1 Hydrogen" width="6" position="-2 0 2" rotation="0 0 0"></a-text>
+      
+      
+
+      <!-- Lights. -->
+      <a-entity rotation="0 0 0" >
+        <a-entity light="type: point; intensity: 2" position="5 -2 5"></a-entity>
+        <a-entity light="type: ambient; color: #E2A0FF"></a-entity>
+
+    <!-- text-->
+     <a-text font="kelsonsans" value="Hydrogen is a chemical element with chemical symbol H and atomic number 1. With an atomic weight of 1.00794 u, hydrogen is the lightest element on the periodic table. Its monatomic form (H) is the most abundant chemical substance in the Universe, constituting roughly 75% of all baryonic mass.It is colorless, odorless, non-toxic, and highly combustible (You can't see it or smell it and it won't kill you unless someone lights a match nearby, then it will very much kill you)." width="6" position="2 0 0" rotation="0 0 0"></a-text>
+     <a-text font="kelsonsans" value="Hydrogren was discovered in 1776 by Henry Cavendish. It was named Hydrogen by Antoine Lavoisier in 1783 when he and Pierre-Simon Laplace proved Cavendish right in the fact that that water could be produced when Hydrogen gas is burned. The name Hydrogen means 'Water Former' in greek, the element having been named for the fact that water is produced when the gas is burnt." width="6" position="9 0 0" rotation="0 0 0"></a-text>
+     <a-text font="kelsonsans" value="For more hydrogen facts, use the WASD keys to move (Facts are to the right)" width="6" position="-2 3 0" rotation="0 0 0"></a-text>
+     <a-text font="kelsonsans" value="What are you doing back here? The facts are on the other side" width="6" position="2 3 3" rotation="0 180 0"></a-text>
+     <a-text font="kelsonsans" value="Boo" width="6" position="0 0 7" rotation="0 180 0"></a-text>
+     <a-text font="kelsonsans" value="Hydrogen has one proton, one electron and the most common isotope of hydrogen has no neutrons. Due to only having one electron, a Hydrogen atom does not have a full outer shell of electrons and is therefore unstable and will readily form covelant bonds with other elements such as oxygen to complete its outer shell." width="6" position="16 0 0" rotation="0 0 0"></a-text>
+     <a-text font="kelsonsans" value="The two biggest industrial uses of Hydrogen are fossil fuel processing (through means such as hydrocracking) and ammonia production (mostly for creation of fertaliser)" width="6" position="23 0 0" rotation="0 0 0"></a-text>
+       <!--Nucleus-->
+        <a-entity rotation="0 0 0" position="0 0 0">
+          <a-entity position="0 0 0">
+              <a-entity rotation="0 0 0">
+                <a-entity mixin="proton"  position="0.2 0 0"></a-entity>
+              </a-entity>
+            </a-entity>
+           <a-animation mixin="spin"></a-animation>
+        </a-entity>
+        <!-- Electrons-->
+          <a-entity rotation="0 0 0">
+            <a-entity position="0 0 0" >
+              <a-torus color="#CCC" radius="1" radius-tubular="0.01" rotation="90 0 0" opacity="0.1"></a-torus>
+              <a-sphere color="#CCC" arc="270" radius="1" rotation="90 0 0" opacity="0.06"></a-sphere>
+                <!--<a-ring color="teal" radius-inner="1" radius-outer="1.2" rotation="90 0 0" ></a-ring>-->
+                <!--<a-circle color="#CCC" opacity="0.05" rotation="90 0 0" radius="1"></a-circle>-->
+             </a-entity>   
+            <a-entity position="0 0 0" >
+              <a-animation mixin="orbit" to="0 360 0" dur="5000"></a-animation>
+              <a-entity mixin="electron" position="1 0 0" ></a-entity> 
+              
+            </a-entity>
+      <a-text font="kelsonsans" value="H" width="6" position="-2 1 2" rotation="0 0 0"></a-text> 
+      
+        
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
