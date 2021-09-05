@@ -7,13 +7,17 @@
     <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script>
     <script src="https://unpkg.com/aframe-look-at-component@0.5.1/dist/aframe-look-at-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@5.0.0/dist/aframe-event-set-component.min.js"></script>
 
   </head>
   <body>
     <a-scene>
       <a-assets>
         <!-- Defining the subatomic particles-->
-        <a-mixin id="electron" geometry="primitive: sphere; radius: 0.1" material="color: yellow" roughness="0.2"></a-mixin>
+        <a-mixin id="electron1" geometry="primitive: sphere; radius: 0.1" material="color: yellow" roughness="0.2"></a-mixin>
+        <a-mixin id="electron2" geometry="primitive: sphere; radius: 0.1" material="color: yellow" roughness="0.2"></a-mixin>
+        <a-mixin id="electron3" geometry="primitive: sphere; radius: 0.1" material="color: yellow" roughness="0.2"></a-mixin>
+        <a-mixin id="electron4" geometry="primitive: sphere; radius: 0.1" material="color: yellow" roughness="0.2"></a-mixin>
         <a-mixin id="neutron" geometry="primitive: sphere; radius: 0.2" material="color: green" roughness="0.4"></a-mixin>
         <a-mixin id="proton" geometry="primitive: sphere; radius: 0.2" material="color: red" roughness="0.6"></a-mixin>
         
@@ -44,7 +48,6 @@
      <a-text font="kelsonsans" value="Discovery/ origins" width="6" position="9 0 0" rotation="0 0 0"></a-text>
      <a-text font="kelsonsans" value="For more Flourine facts, use the WASD keys to move (Facts are to the right)" width="6" position="-2 3 0" rotation="0 0 0"></a-text>
      <a-text font="kelsonsans" value="What are you doing back here? The facts are on the other side" width="6" position="2 3 3" rotation="0 180 0"></a-text>
-     <a-text font="kelsonsans" value="Boo" width="6" position="0 0 7" rotation="0 180 0"></a-text>
      <a-text font="kelsonsans" value="Subatomic particles and reactivity explainations" width="6" position="16 0 0" rotation="0 0 0"></a-text>
      <a-text font="kelsonsans" value="Main uses" width="6" position="23 0 0" rotation="0 0 0"></a-text>
        <!--Nucleus-->
@@ -195,7 +198,7 @@
              </a-entity>   
             <a-entity position="0 0 0" >
               <a-animation mixin="orbit" to="0 360 0" dur="5000"></a-animation>
-              <a-entity mixin="electron" position="1 0 0" ></a-entity> 
+              <a-entity mixin="electron1" position="1 0 0" ></a-entity> 
             </a-entity>
 
             <a-entity rotation="90 0 0">
@@ -204,7 +207,7 @@
             </a-entity>   
             <a-entity position="0 0 0" >
               <a-animation mixin="orbit" to="0 360 0" dur="5000"></a-animation>
-              <a-entity mixin="electron" position="1 0 0" ></a-entity> 
+              <a-entity mixin="electron1" position="1 0 0" ></a-entity> 
             </a-entity>
 
             <!--second shell-->
@@ -216,7 +219,7 @@
             </a-entity>   
             <a-entity position="0 0 0" >
               <a-animation mixin="orbit" to="0 360 0" dur="5000"></a-animation>
-              <a-entity mixin="electron" position="2 0 0" ></a-entity> 
+              <a-entity mixin="electron2" position="2 0 0" ></a-entity> 
             </a-entity>
 
             <a-entity rotation="300 32 0">
@@ -225,7 +228,7 @@
             </a-entity>   
             <a-entity position="0 0 0" >
               <a-animation mixin="orbit" to="0 360 0" dur="5000"></a-animation>
-              <a-entity mixin="electron" position="2 0 0" ></a-entity> 
+              <a-entity mixin="electron2" position="2 0 0" ></a-entity> 
             </a-entity>
 
             <a-entity rotation="210 150 0">
@@ -234,7 +237,7 @@
             </a-entity>   
             <a-entity position="0 0 0" >
               <a-animation mixin="orbit" to="0 360 0" dur="5000"></a-animation>
-              <a-entity mixin="electron" position="2 0 0" ></a-entity> 
+              <a-entity mixin="electron2" position="2 0 0" ></a-entity> 
             </a-entity>
 
             <a-entity rotation="270 220 0">
@@ -243,7 +246,7 @@
             </a-entity>   
             <a-entity position="0 0 0" >
               <a-animation mixin="orbit" to="0 360 0" dur="5000"></a-animation>
-              <a-entity mixin="electron" position="2 0 0" ></a-entity> 
+              <a-entity mixin="electron2" position="2 0 0" ></a-entity> 
             </a-entity>
 
             <a-entity rotation="270 220 17">
@@ -252,7 +255,7 @@
             </a-entity>   
             <a-entity position="0 0 0" >
               <a-animation mixin="orbit" to="0 360 0" dur="5000"></a-animation>
-              <a-entity mixin="electron" position="2 0 0" ></a-entity> 
+              <a-entity mixin="electron2" position="2 0 0" ></a-entity> 
             </a-entity>
 
             <a-entity rotation="156 346 89">
@@ -261,7 +264,7 @@
             </a-entity>   
             <a-entity position="0 0 0" >
               <a-animation mixin="orbit" to="0 360 0" dur="5000"></a-animation>
-              <a-entity mixin="electron" position="2 0 0" ></a-entity> 
+              <a-entity mixin="electron2" position="2 0 0" ></a-entity> 
             </a-entity>
 
             <a-entity rotation="237 342 190">
@@ -270,7 +273,7 @@
             </a-entity>   
             <a-entity position="0 0 0" >
               <a-animation mixin="orbit" to="0 360 0" dur="5000"></a-animation>
-              <a-entity mixin="electron" position="2 0 0" ></a-entity> 
+              <a-entity mixin="electron2" position="2 0 0" ></a-entity> 
             </a-entity>
 
 
