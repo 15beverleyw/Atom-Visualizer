@@ -1,211 +1,193 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width-device-width, initial-scale-1.0">
-    <title>The Periodic Table</title>
-</head>
-<style>
-    td{
-        width: 5vw;
-        border: 1px solid black;
-        text-align: center; 
-    }
+    <title>Helium</title>
+    <meta name="description" content="Animation - A-Frame">
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.5.1/dist/aframe-look-at-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@5.0.0/dist/aframe-event-set-component.min.js"></script>
 
-    .NoBorder{
-        border: none;
-    }
+  </head>
+  <body>
+    <a-scene>
 
-    .Color1{
-        background-color: #8390FA
-    }
+        <!-- interactivity-->
 
-    .Color2{
-        background-color: #ED254E
-    }
-    .Color3{
-        background-color: #F9DC5C
-    }
-    .Color4{
-        background-color: #F88DAD
-    }
-    .Color5{
-        background-color: #B08EA2
-    }
-    .Color6{
-        background-color: #70CAD1
-    }
-    .Color7{
-        background-color: #F7D6E0
-    }
-    .Color8{
-        background-color: #824670
-    }
-    .Color9{
-        background-color: #B2F7EF
-    }
-    .Color10{
-        background-color: #822E81
-    }
-    .Color11{
-        background-color: #AA6373
-    }
+        <a-camera position= "0 -2 6">
+            <a-cursor
+            geometry="primitive: sphere; radius:0.005"
+            material:"color:#000000; shader: flat; opacity: 0.5">
+            </a-cursor>
+        </a-camera>
 
+        <!--first-->
 
+        <a-text font="kelsonsans" value="Select first energy level" width="1.99" position="-2 1 6.5" rotation="0 90 0"></a-text>
+        <a-plane color="#AA0000" position= "-2 1 6"
+            rotation =" 0 90 0"
+            event-set__enter="_event: mouseenter; material.color: #FFAA00"
+            event-set__leave="_event: mouseleave; material.color: #AA0000"
+            event-set__tarcol="_event: click; _target: #electron1; material.color: #17301C"
+            event-set__tarcol="_event: click; _target: #electron2; material.color: #FFAA00"
+            event-set__tarcol="_event: click; _target: #electron3; material.color: #FFAA00"
+            event-set__tarcol="_event: click; _target: #electron4; material.color: #FFAA00">
+        </a-plane>
 
+        <a-text font="kelsonsans" value="Deselect" width="5" position="-2 1 5.3" rotation="0 90 0"></a-text>
+        <a-plane color="#AA0000" position= "-2 1 4.8"
+            rotation =" 0 90 0"
+            event-set__enter="_event: mouseenter; material.color: #FFAA00"
+            event-set__leave="_event: mouseleave; material.color: #AA0000"
+            event-set__tarcol="_event: click; _target: #electron1; material.color:#FFAA00">
+        </a-plane>
+
+        <!--second-->
+
+        <a-text font="kelsonsans" value="Select second energy level" width="1.7" position="-2 -0.2 6.5" rotation="0 90 0"></a-text>
+        <a-plane color="#AA0000" position= "-2 -0.2 6"
+            rotation =" 0 90 0"
+            event-set__enter="_event: mouseenter; material.color: #FFAA00"
+            event-set__leave="_event: mouseleave; material.color: #AA0000"
+            event-set__tarcol="_event: click; _target: #electron2; material.color: #17301C">
+        </a-plane>
+
+        <a-text font="kelsonsans" value="Deselect" width="5" position="-2 -0.2 5.3" rotation="0 90 0"></a-text>
+        <a-plane color="#AA0000" position= "-2 -0.2 4.8"
+            rotation =" 0 90 0"
+            event-set__enter="_event: mouseenter; material.color: #FFAA00"
+            event-set__leave="_event: mouseleave; material.color: #AA0000"
+            event-set__tarcol="_event: click; _target: #electron2; material.color:#FFAA00">
+        </a-plane>
+
+        <!--third-->
+
+        <a-text font="kelsonsans" value="Select third energy level" width="1.9" position="-2 -1.4 6.5" rotation="0 90 0"></a-text>
+        <a-plane color="#AA0000" position= "-2 -1.4 6"
+            rotation =" 0 90 0"
+            event-set__enter="_event: mouseenter; material.color: #FFAA00"
+            event-set__leave="_event: mouseleave; material.color: #AA0000"
+            event-set__tarcol="_event: click; _target: #electron3; material.color: #17301C">
+        </a-plane>
+
+        <a-text font="kelsonsans" value="Deselect" width="5" position="-2 -1.4 5.3" rotation="0 90 0"></a-text>
+        <a-plane color="#AA0000" position= "-2 -1.4 4.8"
+            rotation =" 0 90 0"
+            event-set__enter="_event: mouseenter; material.color: #FFAA00"
+            event-set__leave="_event: mouseleave; material.color: #AA0000"
+            event-set__tarcol="_event: click; _target: #electron3; material.color:#FFAA00">
+        </a-plane>
+
+        <!--fourth-->
+
+        <a-text font="kelsonsans" value="Select fourth energy level" width="1.8" position="-2 -2.6 6.5" rotation="0 90 0"></a-text>
+        <a-plane color="#AA0000" position= "-2 -2.6 6"
+            rotation =" 0 90 0"
+            event-set__enter="_event: mouseenter; material.color: #FFAA00"
+            event-set__leave="_event: mouseleave; material.color: #AA0000"
+            event-set__tarcol="_event: click; _target: #electron4; material.color: #17301C">
+        </a-plane>
+
+        <a-text font="kelsonsans" value="Deselect" width="5" position="-2 -2.6 5.3" rotation="0 90 0"></a-text>
+        <a-plane color="#AA0000" position= "-2 -2.6 4.8"
+            rotation =" 0 90 0"
+            event-set__enter="_event: mouseenter; material.color: #FFAA00"
+            event-set__leave="_event: mouseleave; material.color: #AA0000"
+            event-set__tarcol="_event: click; _target: #electron4; material.color:#FFAA00">
+        </a-plane>
+
+        
+      <a-assets>
+        <!-- Defining the subatomic particles-->
+        <a-mixin id="electron" geometry="primitive: sphere; radius: 0.1" material="color: yellow" roughness="0.2"></a-mixin>
+        <a-mixin id="neutron" geometry="primitive: sphere; radius: 0.2" material="color: green" roughness="0.4"></a-mixin>
+        <a-mixin id="proton" geometry="primitive: sphere; radius: 0.2" material="color: red" roughness="0.6"></a-mixin>
+        
+        <!-- defining the movement of particals-->
+        <a-mixin id="orbit" attribute="rotation" to="0 360 0"
+                  repeat="indefinite" easing="linear" dur="300"></a-mixin>
+        <a-mixin id="spin" attribute="rotation" to="0 -360 360"
+                  repeat="indefinite" easing="linear" dur="9000"></a-mixin>
+      </a-assets>
+
+      <a-sky color="#AAB"></a-sky>
+      <a-entity position="0 0 6">
+        <a-camera wasd-controls-enabled="true" user-height="0"></a-camera>
     
-</style>
-<body>
-        <center>
-        <h1>The Periodic Table Of Elements</h1>
-        <table>
-            <tr> <!--First row-->
-                <td type="button" onclick="window.location.href='http://utcvirtualtours.unaux.com/AtomVis//Models/Hydrogen.html';" class="Color1">1<br/>H</td>
-                <td class="NoBorder" colspan="16"></td>
-                <td type="button" onclick="window.location.href='http://utcvirtualtours.unaux.com/AtomVis//Models/Helium.html';" class ="Color7">2<br/>He</td>
-            </tr>
-            <tr><!--Second row-->
-                <td type="button" onclick="alert('Hello world!')" class ="Color2">3<br/>Li</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color3">4<br/>Be</td>
-                <td class="NoBorder" colspan="10"></td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color4">5<br/>B</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color5">6<br/>C</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color5">7<br/>N</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color5">8<br/>O</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color6">9<br/>F</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color7">10<br/>Ne</td>
-            </tr>
-            <tr><!--Third row-->
-                <td type="button" onclick="alert('Hello world!')" class ="Color2">11<br/>Na</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color3">12<br/>Mg</td>
-                <td class="NoBorder" colspan="10"></td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color8">13<br/>Al</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color4">14<br/>Si</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color5">15<br/>P</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color5">16<br/>S</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color6">17<br/>Cl</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color7">18<br/>Ar</td>
-            </tr>
-            <tr><!--Fourth row-->
-                <td type="button" onclick="alert('Hello world!')" class ="Color2">19<br/>K</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color3">20<br/>Ca</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">21<br/>Sc</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">22<br/>Ti</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">23<br/>V</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">24<br/>Cr</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">25<br/>Mn</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">26<br/>Fe</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">27<br/>Co</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">28<br/>Ni</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">29<br/>Cu</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">30<br/>Zn</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color8">31<br/>Ga</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color4">32<br/>Ge</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color4">33<br/>As</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color5">34<br/>Se</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color6">35<br/>Br</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color7">36<br/>Kr</td>
-            </tr>
-            <tr><!--Fifth row-->
-                <td type="button" onclick="alert('Hello world!')" class ="Color2">37<br/>Rb</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color3">38<br/>Sr</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">39<br/>Y</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">40<br/>Zr</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">41<br/>Nb</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">42<br/>Mo</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">43<br/>Tc</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">44<br/>Ru</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">45<br/>Rh</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">46<br/>Pd</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">47<br/>Ag</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">48<br/>Cd</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color8">49<br/>In</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color8">50<br/>Sn</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color4">51<br/>Sb</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color4">52<br/>Te</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color6">53<br/>I</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color7">54<br/>Xe</td>
-            </tr>
-            <tr><!--Sixth row-->
-                <td type="button" onclick="alert('Hello world!')" class ="Color2">55<br/>Cs</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color3">56<br/>Ba</td>
-                <td class ="Color10">57-71<br/></td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">72<br/>Hf</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">73<br/>Ta</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">74<br/>W</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">75<br/>Re</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">76<br/>Os</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">77<br/>Ir</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">78<br/>Pt</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">79<br/>Au</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">80<br/>Hg</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color8">81<br/>Tl</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color8">82<br/>Pb</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color8">83<br/>Bi</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color4">84<br/>Po</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color6">85<br/>At</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color7">86<br/>Rn</td>
-            </tr>
-            <tr><!--Seventh row-->
-                <td type="button" onclick="alert('Hello world!')" class ="Color2">87<br/>Fr</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color3">88<br/>Ra</td>
-                <td class ="Color11">89-103<br/></td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">104<br/>Rf</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">105<br/>Db</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">106<br/>Sg</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">107<br/>Bh</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">108<br/>Hs</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">109<br/>Mt</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">110<br/>Ds</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">111<br/>Rg</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color9">112<br/>Cn</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color8">113<br/>Nh</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color8">114<br/>Fl</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color8">115<br/>MC</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color8">116<br/>Lv</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color6">117<br/>Ts</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color7">118<br/>Og</td>
-            </tr>
-        </table>
-        <br />
-        <table>
-            <tr> 
-                <td type="button" onclick="alert('Hello world!')" class ="Color10">57<br/>La</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color10">58<br/>Ce</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color10">59<br/>Pr</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color10">60<br/>Nd</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color10">61<br/>Pm</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color10">62<br/>Sm</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color10">63<br/>Eu</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color10">64<br/>Gd</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color10">65<br/>Tb</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color10">66<br/>Dy</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color10">67<br/>Ho</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color10">68<br/>Er</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color10">69<br/>Tm</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color10">70<br/>Yb</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color10">71<br/>Lu</td>
-            </tr>
-            <tr> 
-                <td type="button" onclick="alert('Hello world!')" class ="Color11">89<br/>Ac</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color11">90<br/>Th</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color11">91<br/>Pa</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color11">92<br/>U</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color11">93<br/>Np</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color11">94<br/>Pu</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color11">95<br/>Am</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color11">96<br/>Cm</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color11">97<br/>Bk</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color11">98<br/>Cf</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color11">99<br/>Es</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color11">100<br/>Fm</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color11">101<br/>Md</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color11">102<br/>No</td>
-                <td type="button" onclick="alert('Hello world!')" class ="Color11">103<br/>Lr</td>
-            </tr>
-        </table>
-        </center>
+      </a-entity>
+      
+      <a-text font="kelsonsans" value="2 Helium" width="6" position="-2 0 2" rotation="0 0 0"></a-text>
+      
+      
 
+      <!-- Lights. -->
+      <a-entity rotation="0 0 0" >
+        <a-entity light="type: point; intensity: 2" position="5 -2 5"></a-entity>
+        <a-entity light="type: ambient; color: #E2A0FF"></a-entity>
 
-</body>
+    <!-- text-->
+     <a-text font="kelsonsans" value="Helium is a chemical element with chemical symbol He and atomic number 2. It is a colorless, odorless, tasteless, non-toxic, inert, monatomic gas (so it pretty much does nothing) and is the first in the noble gas group in the periodic table. Its boiling and melting points are the lowest of all the elements." width="6" position="2 0 0" rotation="0 0 0"></a-text>
+     <a-text font="kelsonsans" value="The name 'Helium' stems from the Greek word for Sun - Helios. This name was given by Norman Lockyer ater having observed a yellow spectral line during an eclipse in 1868 which he concluded was caused by an unknown element in the Sun. He was the first to propose that it was a new element and named it ater the sun as it was thought to only exist in the sun at the time of its discovery. The spectral line was also recorded by a french astronomer named Jules Jansson (yes this is spelled correctly, its french) who is often co-credited with the discovery of Helium.(Obviously, Helium has since been found to exist outside of the sun)."width="6" position="9 0 0" rotation="0 0 0"></a-text>
+     <a-text font="kelsonsans" value="For more Helium facts, use the WASD keys to move (Facts are to the right)" width="6" position="-2 3 0" rotation="0 0 0"></a-text>
+     <a-text font="kelsonsans" value="What are you doing back here? The facts are on the other side" width="6" position="2 3 3" rotation="0 180 0"></a-text>
+     <a-text font="kelsonsans" value="The most common isotope of Helium has two protons, two electrons and two neutrons. Having 2 electrons gives it a full outer shell so it is not reactive (inert). Helium is the first of the noble gases and is stable without having to make any bonds." width="6" position="16 0 0" rotation="0 0 0"></a-text>
+     <a-text font="kelsonsans" value="Helium is most commonly known for its use in balloons (and altering voices but you shouldn't breath it in really) but it also has uses in coolant as it can be cooled to cryogenic temperatures quite easily and it is also used in welding (although this can be substituted for a different noble gas)" width="6" position="23 0 0" rotation="0 0 0"></a-text>
+       <!--Nucleus-->
+        <a-entity rotation="0 0 0" position="0 0 0">
+            <a-entity position="0 0 0">
+              <a-entity rotation="0 0 0">
+                <a-entity mixin="proton"  position="0.2 0 0"></a-entity>
+              </a-entity>
+            </a-entity>
+           <a-animation mixin="spin"></a-animation>
+
+            <a-entity position="0 0 0">
+              <a-entity rotation="0 0 0">
+                <a-entity mixin="neutron"  position="0 0 0"></a-entity>
+              </a-entity>
+            </a-entity>
+
+            <a-entity position="0 0 0">
+              <a-entity rotation="0 0 0">
+                <a-entity mixin="neutron"  position="0 0.2 0"></a-entity>
+              </a-entity>
+            </a-entity>
+
+            <a-entity position="0 0 0">
+              <a-entity rotation="0 0 0">
+                <a-entity mixin="proton"  position="0.2 0.2 0"></a-entity>
+              </a-entity>
+            </a-entity>
+           <a-animation mixin="spin"></a-animation>
+        </a-entity>
+        <!-- Electrons-->
+          <a-entity rotation="-30 0 0">
+            <a-entity position="0 0 0" >
+              <a-torus color="#CCC" radius="1" radius-tubular="0.01" rotation="90 0 0" opacity="0.1"></a-torus>
+              <a-sphere color="#CCC" arc="270" radius="1" rotation="90 0 0" opacity="0.06"></a-sphere>
+             </a-entity>   
+            <a-entity position="0 0 0" >
+              <a-animation mixin="orbit" to="0 360 0" dur="5000"></a-animation>
+              <a-entity mixin="electron" position="1 0 0" ></a-entity> 
+              
+            </a-entity>
+
+            <a-entity rotation="30 70 0">
+            <a-entity position="0 0 0" >
+              <a-torus color="#CCC" radius="1" radius-tubular="0.01" rotation="90 0 0" opacity="0.1"></a-torus>
+             </a-entity>   
+            <a-entity position="0 0 0" >
+              <a-animation mixin="orbit" to="0 360 0" dur="5000"></a-animation>
+              <a-entity mixin="electron" position="1 0 0" ></a-entity> 
+            </a-entity>
+            
+            </a-entity>
+
+            
+      <!--<a-text font="kelsonsans" value="He" width="6" position="-2 1 2" rotation="0 0 0"></a-text> -->
+      
+        
+    </a-scene>
+  </body>
 </html>
