@@ -7,13 +7,187 @@
     <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script>
     <script src="https://unpkg.com/aframe-look-at-component@0.5.1/dist/aframe-look-at-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@5.0.0/dist/aframe-event-set-component.min.js"></script>
 
   </head>
   <body>
     <a-scene>
+
+        <!-- interactivity-->
+
+        <a-camera position= "0 -2 6">
+            <a-cursor
+            geometry="primitive: sphere; radius:0.005"
+            material:"color:#000000; shader: flat; opacity: 0.5">
+            </a-cursor>
+        </a-camera>
+
+        <!--first-->
+
+        <a-text font="kelsonsans" value="Select first energy level" width="1.99" position="-2 1 6.5" rotation="0 90 0"></a-text>
+        <a-plane color="#AA0000" position= "-2 1 6"
+            rotation =" 0 90 0"
+            event-set__enter="_event: mouseenter; material.color: #FFAA00"
+            event-set__leave="_event: mouseleave; material.color: #AA0000"
+            event-set__tarcol="_event: click; _target: #electron1; material.color: #17301C"
+            event-set__tarcol="_event: click; _target: #electron2; material.color: #FFAA00"
+            event-set__tarcol="_event: click; _target: #electron3; material.color: #FFAA00"
+            event-set__tarcol="_event: click; _target: #electron4; material.color: #FFAA00">
+        </a-plane>
+
+        <a-text font="kelsonsans" value="Deselect" width="5" position="-2 1 5.3" rotation="0 90 0"></a-text>
+        <a-plane color="#AA0000" position= "-2 1 4.8"
+            rotation =" 0 90 0"
+            event-set__enter="_event: mouseenter; material.color: #FFAA00"
+            event-set__leave="_event: mouseleave; material.color: #AA0000"
+            event-set__tarcol="_event: click; _target: #electron1; material.color:#FFAA00">
+        </a-plane>
+
+        <!--second-->
+
+        <a-text font="kelsonsans" value="Select second energy level" width="1.7" position="-2 -0.2 6.5" rotation="0 90 0"></a-text>
+        <a-plane color="#AA0000" position= "-2 -0.2 6"
+            rotation =" 0 90 0"
+            event-set__enter="_event: mouseenter; material.color: #FFAA00"
+            event-set__leave="_event: mouseleave; material.color: #AA0000"
+            event-set__tarcol="_event: click; _target: #electron2; material.color: #17301C">
+        </a-plane>
+
+        <a-text font="kelsonsans" value="Deselect" width="5" position="-2 -0.2 5.3" rotation="0 90 0"></a-text>
+        <a-plane color="#AA0000" position= "-2 -0.2 4.8"
+            rotation =" 0 90 0"
+            event-set__enter="_event: mouseenter; material.color: #FFAA00"
+            event-set__leave="_event: mouseleave; material.color: #AA0000"
+            event-set__tarcol="_event: click; _target: #electron2; material.color:#FFAA00">
+        </a-plane>
+
+        <!--third-->
+
+        <a-text font="kelsonsans" value="Select third energy level" width="1.9" position="-2 -1.4 6.5" rotation="0 90 0"></a-text>
+        <a-plane color="#AA0000" position= "-2 -1.4 6"
+            rotation =" 0 90 0"
+            event-set__enter="_event: mouseenter; material.color: #FFAA00"
+            event-set__leave="_event: mouseleave; material.color: #AA0000"
+            event-set__tarcol="_event: click; _target: #electron3; material.color: #17301C">
+        </a-plane>
+
+        <a-text font="kelsonsans" value="Deselect" width="5" position="-2 -1.4 5.3" rotation="0 90 0"></a-text>
+        <a-plane color="#AA0000" position= "-2 -1.4 4.8"
+            rotation =" 0 90 0"
+            event-set__enter="_event: mouseenter; material.color: #FFAA00"
+            event-set__leave="_event: mouseleave; material.color: #AA0000"
+            event-set__tarcol="_event: click; _target: #electron3; material.color:#FFAA00">
+        </a-plane>
+
+        <!--fourth-->
+
+        <a-text font="kelsonsans" value="Select fourth energy level" width="1.8" position="-2 -2.6 6.5" rotation="0 90 0"></a-text>
+        <a-plane color="#AA0000" position= "-2 -2.6 6"
+            rotation =" 0 90 0"
+            event-set__enter="_event: mouseenter; material.color: #FFAA00"
+            event-set__leave="_event: mouseleave; material.color: #AA0000"
+            event-set__tarcol="_event: click; _target: #electron4; material.color: #17301C">
+        </a-plane>
+
+        <a-text font="kelsonsans" value="Deselect" width="5" position="-2 -2.6 5.3" rotation="0 90 0"></a-text>
+        <a-plane color="#AA0000" position= "-2 -2.6 4.8"
+            rotation =" 0 90 0"
+            event-set__enter="_event: mouseenter; material.color: #FFAA00"
+            event-set__leave="_event: mouseleave; material.color: #AA0000"
+            event-set__tarcol="_event: click; _target: #electron4; material.color:#FFAA00">
+        </a-plane>
+
+        <!-- interactivity-->
+
+        <a-camera position= "0 -2 6">
+            <a-cursor
+            geometry="primitive: sphere; radius:0.005"
+            material:"color:#000000; shader: flat; opacity: 0.5">
+            </a-cursor>
+        </a-camera>
+
+        <!--first-->
+
+        <a-text font="kelsonsans" value="Select first energy level" width="1.99" position="-2 1 6.5" rotation="0 90 0"></a-text>
+        <a-plane color="#AA0000" position= "-2 1 6"
+            rotation =" 0 90 0"
+            event-set__enter="_event: mouseenter; material.color: #FFAA00"
+            event-set__leave="_event: mouseleave; material.color: #AA0000"
+            event-set__tarcol="_event: click; _target: #electron1; material.color: #17301C"
+            event-set__tarcol="_event: click; _target: #electron2; material.color: #FFAA00"
+            event-set__tarcol="_event: click; _target: #electron3; material.color: #FFAA00"
+            event-set__tarcol="_event: click; _target: #electron4; material.color: #FFAA00">
+        </a-plane>
+
+        <a-text font="kelsonsans" value="Deselect" width="5" position="-2 1 5.3" rotation="0 90 0"></a-text>
+        <a-plane color="#AA0000" position= "-2 1 4.8"
+            rotation =" 0 90 0"
+            event-set__enter="_event: mouseenter; material.color: #FFAA00"
+            event-set__leave="_event: mouseleave; material.color: #AA0000"
+            event-set__tarcol="_event: click; _target: #electron1; material.color:#FFAA00">
+        </a-plane>
+
+        <!--second-->
+
+        <a-text font="kelsonsans" value="Select second energy level" width="1.7" position="-2 -0.2 6.5" rotation="0 90 0"></a-text>
+        <a-plane color="#AA0000" position= "-2 -0.2 6"
+            rotation =" 0 90 0"
+            event-set__enter="_event: mouseenter; material.color: #FFAA00"
+            event-set__leave="_event: mouseleave; material.color: #AA0000"
+            event-set__tarcol="_event: click; _target: #electron2; material.color: #17301C">
+        </a-plane>
+
+        <a-text font="kelsonsans" value="Deselect" width="5" position="-2 -0.2 5.3" rotation="0 90 0"></a-text>
+        <a-plane color="#AA0000" position= "-2 -0.2 4.8"
+            rotation =" 0 90 0"
+            event-set__enter="_event: mouseenter; material.color: #FFAA00"
+            event-set__leave="_event: mouseleave; material.color: #AA0000"
+            event-set__tarcol="_event: click; _target: #electron2; material.color:#FFAA00">
+        </a-plane>
+
+        <!--third-->
+
+        <a-text font="kelsonsans" value="Select third energy level" width="1.9" position="-2 -1.4 6.5" rotation="0 90 0"></a-text>
+        <a-plane color="#AA0000" position= "-2 -1.4 6"
+            rotation =" 0 90 0"
+            event-set__enter="_event: mouseenter; material.color: #FFAA00"
+            event-set__leave="_event: mouseleave; material.color: #AA0000"
+            event-set__tarcol="_event: click; _target: #electron3; material.color: #17301C">
+        </a-plane>
+
+        <a-text font="kelsonsans" value="Deselect" width="5" position="-2 -1.4 5.3" rotation="0 90 0"></a-text>
+        <a-plane color="#AA0000" position= "-2 -1.4 4.8"
+            rotation =" 0 90 0"
+            event-set__enter="_event: mouseenter; material.color: #FFAA00"
+            event-set__leave="_event: mouseleave; material.color: #AA0000"
+            event-set__tarcol="_event: click; _target: #electron3; material.color:#FFAA00">
+        </a-plane>
+
+        <!--fourth-->
+
+        <a-text font="kelsonsans" value="Select fourth energy level" width="1.8" position="-2 -2.6 6.5" rotation="0 90 0"></a-text>
+        <a-plane color="#AA0000" position= "-2 -2.6 6"
+            rotation =" 0 90 0"
+            event-set__enter="_event: mouseenter; material.color: #FFAA00"
+            event-set__leave="_event: mouseleave; material.color: #AA0000"
+            event-set__tarcol="_event: click; _target: #electron4; material.color: #17301C">
+        </a-plane>
+
+        <a-text font="kelsonsans" value="Deselect" width="5" position="-2 -2.6 5.3" rotation="0 90 0"></a-text>
+        <a-plane color="#AA0000" position= "-2 -2.6 4.8"
+            rotation =" 0 90 0"
+            event-set__enter="_event: mouseenter; material.color: #FFAA00"
+            event-set__leave="_event: mouseleave; material.color: #AA0000"
+            event-set__tarcol="_event: click; _target: #electron4; material.color:#FFAA00">
+        </a-plane>
+
+        
       <a-assets>
         <!-- Defining the subatomic particles-->
-        <a-mixin id="electron" geometry="primitive: sphere; radius: 0.1" material="color: yellow" roughness="0.2"></a-mixin>
+        <a-mixin id="electron1" geometry="primitive: sphere; radius: 0.1" material="color: yellow" roughness="0.2"></a-mixin>
+        <a-mixin id="electron2" geometry="primitive: sphere; radius: 0.1" material="color: yellow" roughness="0.2"></a-mixin>
+        <a-mixin id="electron3" geometry="primitive: sphere; radius: 0.1" material="color: yellow" roughness="0.2"></a-mixin>
+        <a-mixin id="electron4" geometry="primitive: sphere; radius: 0.1" material="color: yellow" roughness="0.2"></a-mixin>
         <a-mixin id="neutron" geometry="primitive: sphere; radius: 0.2" material="color: green" roughness="0.4"></a-mixin>
         <a-mixin id="proton" geometry="primitive: sphere; radius: 0.2" material="color: red" roughness="0.6"></a-mixin>
         
@@ -44,7 +218,6 @@
      <a-text font="kelsonsans" value="Discovery/ origins" width="6" position="9 0 0" rotation="0 0 0"></a-text>
      <a-text font="kelsonsans" value="For more Chromium facts, use the WASD keys to move (Facts are to the right)" width="6" position="-2 3 0" rotation="0 0 0"></a-text>
      <a-text font="kelsonsans" value="What are you doing back here? The facts are on the other side" width="6" position="2 3 3" rotation="0 180 0"></a-text>
-     <a-text font="kelsonsans" value="Boo" width="6" position="0 0 7" rotation="0 180 0"></a-text>
      <a-text font="kelsonsans" value="Subatomic particles and reactivity explainations" width="6" position="16 0 0" rotation="0 0 0"></a-text>
      <a-text font="kelsonsans" value="Main uses" width="6" position="23 0 0" rotation="0 0 0"></a-text>
        <!--Nucleus-->
@@ -426,7 +599,7 @@
              </a-entity>   
             <a-entity position="0 0 0" >
               <a-animation mixin="orbit" to="0 360 0" dur="5000"></a-animation>
-              <a-entity mixin="electron" position="1 0 0" ></a-entity> 
+              <a-entity mixin="electron1" position="1 0 0" ></a-entity> 
             </a-entity>
 
             <a-entity rotation="90 0 0">
@@ -435,7 +608,7 @@
             </a-entity>   
             <a-entity position="0 0 0" >
               <a-animation mixin="orbit" to="0 360 0" dur="5000"></a-animation>
-              <a-entity mixin="electron" position="1 0 0" ></a-entity> 
+              <a-entity mixin="electron1" position="1 0 0" ></a-entity> 
             </a-entity>
 
             <!--second shell-->
@@ -447,7 +620,7 @@
             </a-entity>   
             <a-entity position="0 0 0" >
               <a-animation mixin="orbit" to="0 360 0" dur="5000"></a-animation>
-              <a-entity mixin="electron" position="2 0 0" ></a-entity> 
+              <a-entity mixin="electron2" position="2 0 0" ></a-entity> 
             </a-entity>
 
             <a-entity rotation="300 32 0">
@@ -456,7 +629,7 @@
             </a-entity>   
             <a-entity position="0 0 0" >
               <a-animation mixin="orbit" to="0 360 0" dur="5000"></a-animation>
-              <a-entity mixin="electron" position="2 0 0" ></a-entity> 
+              <a-entity mixin="electron2" position="2 0 0" ></a-entity> 
             </a-entity>
 
             <a-entity rotation="210 150 0">
@@ -465,7 +638,7 @@
             </a-entity>   
             <a-entity position="0 0 0" >
               <a-animation mixin="orbit" to="0 360 0" dur="5000"></a-animation>
-              <a-entity mixin="electron" position="2 0 0" ></a-entity> 
+              <a-entity mixin="electron2" position="2 0 0" ></a-entity> 
             </a-entity>
 
             <a-entity rotation="270 220 0">
@@ -474,7 +647,7 @@
             </a-entity>   
             <a-entity position="0 0 0" >
               <a-animation mixin="orbit" to="0 360 0" dur="5000"></a-animation>
-              <a-entity mixin="electron" position="2 0 0" ></a-entity> 
+              <a-entity mixin="electron2" position="2 0 0" ></a-entity> 
             </a-entity>
 
             <a-entity rotation="270 220 17">
@@ -483,7 +656,7 @@
             </a-entity>   
             <a-entity position="0 0 0" >
               <a-animation mixin="orbit" to="0 360 0" dur="5000"></a-animation>
-              <a-entity mixin="electron" position="2 0 0" ></a-entity> 
+              <a-entity mixin="electron2" position="2 0 0" ></a-entity> 
             </a-entity>
 
             <a-entity rotation="156 346 89">
@@ -492,7 +665,7 @@
             </a-entity>   
             <a-entity position="0 0 0" >
               <a-animation mixin="orbit" to="0 360 0" dur="5000"></a-animation>
-              <a-entity mixin="electron" position="2 0 0" ></a-entity> 
+              <a-entity mixin="electron2" position="2 0 0" ></a-entity> 
             </a-entity>
 
             <a-entity rotation="237 342 190">
@@ -501,7 +674,7 @@
             </a-entity>   
             <a-entity position="0 0 0" >
               <a-animation mixin="orbit" to="0 360 0" dur="5000"></a-animation>
-              <a-entity mixin="electron" position="2 0 0" ></a-entity> 
+              <a-entity mixin="electron2" position="2 0 0" ></a-entity> 
             </a-entity>
 
             <a-entity rotation="238 176 243">
@@ -510,7 +683,7 @@
             </a-entity>   
             <a-entity position="0 0 0" >
               <a-animation mixin="orbit" to="0 360 0" dur="5000"></a-animation>
-              <a-entity mixin="electron" position="2 0 0" ></a-entity> 
+              <a-entity mixin="electron2" position="2 0 0" ></a-entity> 
             </a-entity>
 
             <!--Third shell-->
@@ -522,7 +695,7 @@
             </a-entity>   
             <a-entity position="0 0 0" >
               <a-animation mixin="orbit" to="0 360 0" dur="5000"></a-animation>
-              <a-entity mixin="electron" position="3 0 0" ></a-entity> 
+              <a-entity mixin="electron3" position="3 0 0" ></a-entity> 
             </a-entity>
 
             <a-entity rotation="310 60 75">
@@ -531,7 +704,7 @@
             </a-entity>   
             <a-entity position="0 0 0" >
               <a-animation mixin="orbit" to="0 360 0" dur="5000"></a-animation>
-              <a-entity mixin="electron" position="3 0 0" ></a-entity> 
+              <a-entity mixin="electron3" position="3 0 0" ></a-entity> 
             </a-entity>
 
             <a-entity rotation="260 273 195">
@@ -540,7 +713,7 @@
             </a-entity>   
             <a-entity position="0 0 0" >
               <a-animation mixin="orbit" to="0 360 0" dur="5000"></a-animation>
-              <a-entity mixin="electron" position="3 0 0" ></a-entity> 
+              <a-entity mixin="electron3" position="3 0 0" ></a-entity> 
             </a-entity>
 
             <a-entity rotation="128 254 245">
@@ -549,7 +722,7 @@
             </a-entity>   
             <a-entity position="0 0 0" >
               <a-animation mixin="orbit" to="0 360 0" dur="5000"></a-animation>
-              <a-entity mixin="electron" position="3 0 0" ></a-entity> 
+              <a-entity mixin="electron3" position="3 0 0" ></a-entity> 
             </a-entity>
 
             <a-entity rotation="175 286 123">
@@ -558,7 +731,7 @@
             </a-entity>   
             <a-entity position="0 0 0" >
               <a-animation mixin="orbit" to="0 360 0" dur="5000"></a-animation>
-              <a-entity mixin="electron" position="3 0 0" ></a-entity> 
+              <a-entity mixin="electron3" position="3 0 0" ></a-entity> 
             </a-entity>
 
             <a-entity rotation="267 97 293">
@@ -567,7 +740,7 @@
             </a-entity>   
             <a-entity position="0 0 0" >
               <a-animation mixin="orbit" to="0 360 0" dur="5000"></a-animation>
-              <a-entity mixin="electron" position="3 0 0" ></a-entity> 
+              <a-entity mixin="electron3" position="3 0 0" ></a-entity> 
             </a-entity>
 
             <a-entity rotation="345 23 23">
@@ -576,7 +749,7 @@
             </a-entity>   
             <a-entity position="0 0 0" >
               <a-animation mixin="orbit" to="0 360 0" dur="5000"></a-animation>
-              <a-entity mixin="electron" position="3 0 0" ></a-entity> 
+              <a-entity mixin="electron3" position="3 0 0" ></a-entity> 
             </a-entity>
 
             <a-entity rotation="23 323 23">
@@ -585,7 +758,7 @@
             </a-entity>   
             <a-entity position="0 0 0" >
               <a-animation mixin="orbit" to="0 360 0" dur="5000"></a-animation>
-              <a-entity mixin="electron" position="3 0 0" ></a-entity> 
+              <a-entity mixin="electron3" position="3 0 0" ></a-entity> 
             </a-entity>
 
             <a-entity rotation="232 329 123">
@@ -594,7 +767,7 @@
             </a-entity>   
             <a-entity position="0 0 0" >
               <a-animation mixin="orbit" to="0 360 0" dur="5000"></a-animation>
-              <a-entity mixin="electron" position="3 0 0" ></a-entity> 
+              <a-entity mixin="electron3" position="3 0 0" ></a-entity> 
             </a-entity>
 
             <a-entity rotation="111 243 43">
@@ -603,7 +776,7 @@
             </a-entity>   
             <a-entity position="0 0 0" >
               <a-animation mixin="orbit" to="0 360 0" dur="5000"></a-animation>
-              <a-entity mixin="electron" position="3 0 0" ></a-entity> 
+              <a-entity mixin="electron3" position="3 0 0" ></a-entity> 
             </a-entity>
 
             <a-entity rotation="20 343 243">
@@ -612,7 +785,7 @@
             </a-entity>   
             <a-entity position="0 0 0" >
               <a-animation mixin="orbit" to="0 360 0" dur="5000"></a-animation>
-              <a-entity mixin="electron" position="3 0 0" ></a-entity> 
+              <a-entity mixin="electron3" position="3 0 0" ></a-entity> 
             </a-entity>
 
             <a-entity rotation="323 323 323">
@@ -621,7 +794,7 @@
             </a-entity>   
             <a-entity position="0 0 0" >
               <a-animation mixin="orbit" to="0 360 0" dur="5000"></a-animation>
-              <a-entity mixin="electron" position="3 0 0" ></a-entity> 
+              <a-entity mixin="electron3" position="3 0 0" ></a-entity> 
             </a-entity>
 
             <a-entity rotation="287 33 190">
@@ -630,7 +803,7 @@
             </a-entity>   
             <a-entity position="0 0 0" >
               <a-animation mixin="orbit" to="0 360 0" dur="5000"></a-animation>
-              <a-entity mixin="electron" position="3 0 0" ></a-entity> 
+              <a-entity mixin="electron3" position="3 0 0" ></a-entity> 
             </a-entity>
 
             <!--Fourth shell-->
