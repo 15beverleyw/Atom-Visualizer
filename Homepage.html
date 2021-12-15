@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    overflow: hidden;
+}
+
+p.solid {border-style: solid;}
+
+/* Style the header */
+header {
+  background-color:#E1B814;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  border: 10px solid black;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 25%;
+  height: 10000px; /* only for demonstration, should be removed */
+  background:#14E1B8;
+  padding: 20px;
+  border: 10px solid black;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>Atom</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">Interactive periodic table</a></li>
+    </ul>
+  </nav>
+</section>
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">Quiz</a></li>
+    </ul>
+  </nav>
+</section>
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">Leaderboard</a></li>
+    </ul>
+  </nav>
+</section>
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">Learning resources</a></li>
+    </ul>
+  </nav>
+</section>
+
+</body>
+</html>
